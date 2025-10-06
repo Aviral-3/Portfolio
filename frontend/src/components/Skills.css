@@ -1,0 +1,107 @@
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #302f2c;
+}
+
+.skills-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  padding: 1.75rem;
+  border-radius: 12px;
+  background-color: #1a1c1b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(217, 251, 6, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+
+.skill-card:hover {
+  box-shadow: 0 8px 30px rgba(217, 251, 6, 0.2);
+  transform: translateY(-6px);
+  border-color: #d9fb06;
+}
+
+.skill-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: #d9fb06;
+  color: #1a1c1b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(217, 251, 6, 0.4);
+}
+
+.skill-category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d9fb06;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tag {
+  padding: 0.5rem 0.9rem;
+  background-color: #302f2c;
+  color: #888680;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 251, 6, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: #d9fb06;
+  color: #1a1c1b;
+  border-color: #d9fb06;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

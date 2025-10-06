@@ -1,0 +1,220 @@
+.certifications-section {
+  padding: 4rem 2rem;
+  background-color: #1a1c1b;
+}
+
+.certifications-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cert-subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.cert-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #302f2c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(217, 251, 6, 0.15);
+  display: flex;
+  gap: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.cert-card:nth-child(1) { animation-delay: 0.1s; }
+.cert-card:nth-child(2) { animation-delay: 0.2s; }
+.cert-card:nth-child(3) { animation-delay: 0.3s; }
+
+.cert-card:hover {
+  box-shadow: 0 8px 30px rgba(217, 251, 6, 0.2);
+  transform: translateY(-3px);
+  border-color: #d9fb06;
+}
+
+.cert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #d9fb06;
+  color: #1a1c1b;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.cert-content {
+  flex: 1;
+}
+
+.cert-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d9fb06;
+  margin-bottom: 0.5rem;
+}
+
+.cert-issuer {
+  font-size: 0.9rem;
+  color: #888680;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.cert-date {
+  font-size: 0.8rem;
+  color: #888680;
+}
+
+.achievements-list,
+.leadership-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.achievement-card,
+.leadership-card {
+  padding: 1.75rem;
+  border-radius: 12px;
+  background-color: #302f2c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(217, 251, 6, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  animation: slideInLeft 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.achievement-card:nth-child(1) { animation-delay: 0.1s; }
+.achievement-card:nth-child(2) { animation-delay: 0.2s; }
+.achievement-card:nth-child(3) { animation-delay: 0.3s; }
+
+.leadership-card:nth-child(1) { animation-delay: 0.1s; }
+.leadership-card:nth-child(2) { animation-delay: 0.2s; }
+
+.achievement-card:hover,
+.leadership-card:hover {
+  box-shadow: 0 8px 30px rgba(217, 251, 6, 0.2);
+  transform: translateY(-4px);
+  border-color: #d9fb06;
+}
+
+.achievement-card {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.achievement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: #f8d47a;
+  color: #1a1c1b;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #d9fb06;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.achievement-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888680;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-date {
+  font-size: 0.8rem;
+  color: #888680;
+  font-weight: 500;
+}
+
+.leadership-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #d9fb06;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.leadership-org {
+  font-size: 0.95rem;
+  color: #888680;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.leadership-period {
+  font-size: 0.8rem;
+  color: #888680;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.leadership-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #888680;
+}
+
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .certifications-container {
+    gap: 2.5rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-card {
+    flex-direction: column;
+  }
+
+  .achievement-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
